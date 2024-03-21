@@ -1,0 +1,12 @@
+body {
+  background-color: blue;
+}
+
+.carte {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
