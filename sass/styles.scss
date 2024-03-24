@@ -1,9 +1,108 @@
-body{
-    background-color:blue;
+//variable
+$color-start: #9356DC;
+$color-end: #FF79DA;
+$button-gradient: linear-gradient(to right, $color-start, $color-end);
+$color-btn: #F3F3F3;
+$color-text: #101010;
+$color-carte: #353535;
+$logo-width: 33%;
+$logo-height: 53px;
+$shadow-btn:0 4px 8px rgba(0, 0, 0, 0.1);
+// Mixins-img
+@mixin img-widht{
+width: 300px;
+height: 144px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+object-fit: cover;
 }
-.carte{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
+//mixins-flex
+@mixin flex-row-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+@mixin flex-row{
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-colum-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex-colum{
+  display: flex;
+  flex-direction: column;
+}
+//mixins-carte
+@mixin cart{
+  border: solid 1px white;
+  color:$color-carte;
+  background-color:#EAEAEA;
+  width: 100%;
+  border-radius: 10px;
+}
+//mixins-boutton
+@mixin btn{
+  text-decoration: none;
+  border: solid 1px $color-end;
+  border-radius: 50px;
+  background-color: $color-end;
+  color: $color-btn;
+  text-align: center;
+  width: 27%;
+  padding: 13px;
+  box-shadow:$shadow-btn;
+}
+//mixins-wrap
+@mixin flex-vrap{
+  display: flex;
+  flex-wrap: wrap
+}
+
+/*.. Entête..*/
+header{
+  @include flex-colum-center;
+ .carte{
+    @include flex-row-center;
+    justify-content: center;
+    gap: 15px;
+    text-decoration: none;
+    @include cart;
+  }
+  .explore-button {
+    @include btn;
+  }
+  .logo{
+    width: $logo-width;
+    height: $logo-height;
+  }
+}
+/*... main...*/
+.main-container{
+  @include flex-colum;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  .fonctionnement{
+    @include flex-colum;
+    .etape{
+      @include flex-row-center;
+      gap: 9px;
+      .choix{
+        @include flex-row-center;
+        gap: 20px;
+      }
+    }
+  }
+ .restaurants{
+  @include flex-colum;
+  .box-restaurants{
+    @include flex-row-center;
+    .link-restau{
+      width: 30%;
+    }
+  }
+}
+}
+

@@ -1,12 +1,73 @@
-body {
-  background-color: blue;
+@charset "UTF-8";
+/*.. Entête..*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.carte {
+header .carte {
   display: flex;
   flex-direction: row;
   align-items: center;
-  list-style-type: none;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  border: solid 1px white;
+  color: #353535;
+  background-color: #EAEAEA;
+  width: 100%;
+  border-radius: 10px;
+}
+header .explore-button {
+  text-decoration: none;
+  border: solid 1px #FF79DA;
+  border-radius: 50px;
+  background-color: #FF79DA;
+  color: #F3F3F3;
+  text-align: center;
+  width: 27%;
+  padding: 13px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+  width: 33%;
+  height: 53px;
+}
+
+/*... main...*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+.main-container .fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .fonctionnement .etape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+.main-container .fonctionnement .etape .choix {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.main-container .restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .restaurants .box-restaurants {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-container .restaurants .box-restaurants .link-restau {
+  width: 30%;
 }
 
 /*# sourceMappingURL=styles.css.map */
