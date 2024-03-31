@@ -1,130 +1,159 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ohmyfood</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" type="text/css" href="styles.css">
-      
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-    <body>
-        <header>
-            <div>
-               <a class=" link-retour" href="index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
-            <img class="logo" src="images/logo/ohmyfood.png" alt="Logo ohmyfood" >
+</head>
+
+<body class="menu">
+    <header>
+        <div class="link-header">
+            <a class=" link-retour" href="index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <img class="logo-men" src="images/logo/ohmyfood.png" alt="Logo ohmyfood">
         </div>
-        <img class="header-img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="image header"> 
-        </header>
-        <section class="Le-délice-des-sens">
-            <div class="title-délice">
-            <h1>Le délice des sens</h1>
+        <img class="header-img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="image header">
+    </header>
+    <main class="menus-container">
+        <!-- Section principale pour présenter le restaurant -->
+        <div class="sections-menus">
+        <section class="restaurant-intro">
+            <h1 class="menu-title">Le délice des sens</h1>
             <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="article-délice">
-            <article class="entrées">
-                <h2>Entrées</h2>
-            <div class="Tartare">
-                <h3>Tartare de thon</h3>
-                <p>Assaisonné au yuzu </p>
-                <div class="prix">
-                25€
-                </div>
-            </div>
-            <div class="Bouchée-de-homard">
-                <h3>Bouchée de homard croustillant </h3>
-                <p>Et sa farandole de petits légumes </p>
-                <div class="prix">
-                35€
-                </div>
-            </div>
-            <div class="Poulet">
-                <h3>Poulet rôti aux herbes de Provence </h3>
-                <p>Et sa crème de truffe</p>
-                <div class="prix">
-                40€
-                </div>
-            </div>
-            </article> 
+        </section>
+    
+        <!-- Section pour les entrées -->
+        <section class="menu-category-entrées">
             
-            <article class="Plats">
-                <h2>Plats</h2>
-            <div class="Poulet-rôti">
-                <h3>Poulet rôti aux herbes de Provence </h3>
-                <p>Et sa crème de truffe</p>
-                <div class="prix">
-                40€
-                </div>
-            </div>
-            <div class="Langouste">
-                <h3>Langouste rôtie </h3>
-                <p>Et ses légumes de saison</p>
-                <div class="prix">
-                35€
-                </div>
-            </div>
-            <div class="Côte">
-                <h>Côte de bœuf Angus </h3>
-                <p>Et sa purée de panais</p>
-                <div class="prix">
-                44€
-                </div>
+            <h2>Entrées</h2>
+            <article class="entrées">
+                <h3>Fricassée d'escargots</h3>
+                <div class="price">
+                <p>Au piment d'Espelette</p>
+                <span>25€</span>
+                 </div>
+            </article>
+            <article class="entrées">
+                <h3>Foie gras de canard mi-cuit</h3>
+                <div class="price">
+                <p>Et ses copeaux de truffe noire</p>
+                <span>35€</span>
             </div>
             </article>
-            
-            <article class="Desserts">
-                <h2>Desserts</h2>
-            <div class="farandole">
-                <h3>Farandole de desserts</h3>
-                <p>Du chef </p>
-                <div class="prix">
-                18€
-                </div>
+            <article class="entrées">
+                <h3>Œuf au plat</h3>
+                <div class="price">
+                <p>Assaisonné à la truffe sur lit de caviar</p>
+                <span >20€</span>
             </div>
-            <div class="crème">
-                <h3>Crème brulée  </h3>
-                <p>Revisitée </p>
-                <div class="prix">
-                22€
-                </div>
-            </div>
-            <div class="Tiramisu">
-                <h>Tiramisu  </h3>
-                <p>À la noisette</p>
-                <div class="prix">
-                23€
-                </div>
-            </div>
-            </article> 
-           
-        </div>
-        <a class="btn-commander" href="index.html">
-        <button>Commander</button>
-    </a>
+            </article>
         </section>
-        <footer>
-         <section classe footer>
-            <nav>
-                <div class="foot-propos">
-                    <i class="fa-solid fa-utensils"></i>
-                    <a href="#">Proposer un restaurant</a></div>
-                <div class="foot-devenir">
-                    <i class="fa-regular fa-handshake"></i>
-                    <a href="#">Devenir partenaire</a></div>
-                <a href="#">Mentions légales</a>
-                <a href="#">Contact</a>
-            </nav>
-                <img class="end" src="images/logo/ohmyfood.png" alt="logo-footer">
+    
+        <!-- Section pour les plats -->
+        <section class="menu-category-plats">
+            <h2>Plats</h2>
+            <article class="plat">
+                <h3>Filet de bœuf aux herbes</h3>
+                <div class="price">
+                <p>Accompagné de sa ribambelle de légumes</p>
+                <span >40€</span>
+               </div>
+            </article>
+            <article class="plat">
+                <h3>Parmentier de queue de bœuf</h3>
+                <div class="price">
+                <p>À la truffe noire sur sa purée de panais</p>
+                <span>35€</span>
             </div>
-         </section>   
-        </footer>
-        
-    </body>
-</htm>
+            </article>
+            <article class="plat">
+                <h3>Filet de turbot</h3>
+                <div class="price">
+                <p>Aux agrumes</p>
+                <span >44€</span>
+            </div>
+            </article>
+        </section>
+    
+        <!-- Section pour les desserts -->
+        <section class="menu-category-desserts">
+            <h2>Desserts</h2>
+            <article class="dessert">
+                <h3>Paris-Brest</h3>
+                <div class="price"> 
+                <p>Revisité</p>
+               <span>18€</span> 
+            </div>
+            </article>
+            <article class="dessert">
+                <h3>Macaron au chocolat d'exception</h3>
+                <div class="price">
+                <p>Et glace à la vanille de Madagascar</p>
+                <span >22€</span>
+            </div>
+            </article>
+            <article class="dessert">
+                <h3>Mousse au chocolat</h3>
+                <div class="price">
+                <p>Au piment d'Espelette et à la truffe noire</p>
+                <span >23€</span>
+                </div>
+            </article>
+        </section>
+    
+        <!-- Bouton de commande -->
+        <div class="commander-btn">
+            <a id="commande" href="index.html" class="btn-commander">Commander</a>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <section class="footer">
+            <nav class="menu-nav">
+            
+            <div class="nav-end">
+                
+                <div class="propo-deveni">
+                
+                    <a class="link-nav" href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                    </a>
+                
+                
+                    <a class="link-nav"  href="#">
+                    <i class="fa-regular fa-handshake"></i>
+                    <p> Devenir partenaire</p>
+                    </a>
+               </div>
+            <div class="mention-contact">
+               
+                <a class="link-nav"  href="#">
+                
+                Mentions légales
+               
+                </a>
+                <a class="link-nav"  href="#">
+                Contact
+                </a>
+            </div>
+            </div>
+            <div class="logo-en-page">
+            <img class="logo-footer"  src="images/logo/ohmyfood.png" alt="img-footer">
+        </div>
+        </nav>
+        </section>
+    </footer>
+
+</body>
+</html>

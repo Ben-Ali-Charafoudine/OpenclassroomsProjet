@@ -1,0 +1,126 @@
+
+@mixin img-widht{
+    width: 100%;
+    height: 144px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    }
+    //mixins-flex
+    @mixin flex-row-center{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    @mixin flex-row{
+      display: flex;
+      flex-direction: row;
+    }
+    @mixin flex-colum-center{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @mixin flex-colum{
+      display: flex;
+      flex-direction: column;
+    }
+    //mixins-carte
+    @mixin cart{
+      border: solid 1px white;
+      background-color:#EAEAEA;
+      width: 100%;
+    }
+    //mixins-boutton
+    
+    //mixins-wrap
+    @mixin flex-vrap{
+      display: flex;
+      flex-wrap: wrap
+    }
+    //mixins-article
+    @mixin article-awsom{
+      display: flex;
+      justify-content:end;
+    }
+    @mixin article-titl{
+      margin: 0px;
+      padding: 20px;
+    }
+    @mixin article-p{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    // boutto-list
+    @mixin placement{
+      position: relative;
+      display: inline-block;
+      padding-top: 30px;
+    }
+    @mixin btn-list{
+     position: relative;
+     z-index: 2;
+    list-style-type: none;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: solid 1px $color-end;
+    border-radius: 50px;
+    background-image: $button-gradient;
+    color: $color-btn;
+    text-align: center;
+    width: 27%;
+    padding: 13px; 
+    }
+    @mixin effet{
+       position: absolute;
+       top: 100%;
+       left: 0;
+       transform: scaleY(0);
+       transform-origin: top;
+       transition: transform 0.5s ease; 
+      z-index: 1;
+       background-color: white;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       width: 100%;
+       
+    }
+    @mixin bordur{
+     border-radius:18px;
+     border: solid 1px;
+    }
+    @mixin border-top{
+      border: solid 1px #fff;
+      border-top-left-radius: 41px;
+      border-top-right-radius: 41px;
+
+    }
+    // fonction
+    @mixin border{
+      border: solid 1px #fff;
+      border-radius: 23px;
+      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+      width: 100%;
+    }
+    @mixin ul-li{
+          margin: 0;
+          padding: 0;
+          list-style: none;    
+    }
+    @mixin li-ul{
+       padding: 8px;
+          border-bottom: 1px solid #ddd; 
+    }
+    // mixin main
+    @mixin box-restaurants{
+      display: flex;
+      flex-wrap: wrap;
+     align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 29px 10px;
+      gap: 40px;
+      align-items: center;
+    }
