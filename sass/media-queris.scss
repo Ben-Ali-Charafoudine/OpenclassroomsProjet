@@ -1,0 +1,97 @@
+@media (min-width:915px){
+    /*... page d'acceuil ..*/
+    // en tête
+    header{
+      .link-header{
+        justify-content: space-between;
+     .logo-men{
+      width: 80px;
+     }
+    }
+     .logo-tête{
+      width: 22%;
+      height: 45px;
+      padding: 24px 0px;  
+     }
+     .btn-h1{
+      padding: 26px 27px;
+        h1{
+            text-align: center;
+            font-size: 43px; 
+        }
+     }
+
+    }
+    /*.. coreps de site ..*/
+    .main-container{
+        // fonctionnement  
+    .fonctionnement{
+      gap: 20px;
+      padding: 0 56px;
+      box-sizing: border-box;
+    .etape{
+      @include flex-row-center;
+      flex-wrap: nowrap;
+        .link-fonctionnement{
+            width: 32%;
+            font-size: 18px;
+       } 
+     }
+    }
+    // restorant to viste
+    .restaurants{
+    .box-restaurants{
+        .link-restau{
+            width:44% ;
+        }
+    }
+  }
+}
+/*... pied du site */
+footer{ 
+    @include flex-row-center;
+   
+    .menu-nav{
+    @include flex-row-center;
+    gap: 49px;
+    
+  .nav-end{
+  @include flex-row-center;
+    gap:50px;
+  }
+   .propo-deveni{
+        @include flex-row-center;
+        gap: 16px;
+        padding-left: 15px;
+        .link-nav{
+        p{
+            margin: 0;
+        }     
+        }
+       
+        }  
+       
+      .mention-contact{
+       @include flex-row-center;
+        gap: 9px;
+      }  
+    
+
+    }
+     .logo-en-page{
+      width: 30%;
+    .logo-footer{
+      filter: brightness(0) invert(1);
+      width: 48%; 
+  }
+}
+  }
+  //les pages
+  .menu{
+    .menus-container{
+        padding: 0 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+  } 
+}
