@@ -1,10 +1,11 @@
  @import "variable.scss";
  @import "mixin.scss";
- @import "https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap";
+ @import "https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@400;500;700&display=swap";
  body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
  }
 /*.. Entête..*/
 header{
@@ -15,6 +16,7 @@ header{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-family: roboto;
   }
   .logo-carte{
     @include cart;
@@ -25,71 +27,47 @@ header{
     text-decoration: none;
     color: $color-text;
   }
-  
 }
   //boutton explore
   .btn-h1{
-display: flex;
-flex-direction: column;
+@include flex-colum;
 align-items: center;
 background-color: $color-back;
 padding: 40px 0px;
-
-  .menu-container {
-     @include placement;
-    
-    &:hover #restaurantsList {
-      transform: scaleY(1);
+  text-align: center;
+  padding: 0 27px;
     }
-    #exploreButton {
-      @include btn-list;
-      &:hover {
-        transform: scale(1.1); 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-      }
-    } 
- 
-    #restaurantsList {
-      @include effet;
-      ul {
-        @include ul-li;
-        
-          li{
-          a{
-          text-decoration: none;
-            &:nth-child(1) {
-                border-color: red;
-                &:hover{ 
-                border-color: darkred; 
-                background-color: lightcoral; 
-              }
-            }
-            &:nth-child(2) {
-              border-color: green; 
-              &:hover {
-                border-color: darkgreen; 
-                background-color: lightgreen; 
-              }
-            }
-            
-            &:nth-child(3) {
-              border-color: blue; 
-              &:hover {
-                border-color: darkblue; 
-                background-color: lightskyblue; 
-              }
-            }
-          }
-        }
-        
-        li {
-          @include li-ul;
-        }
-      }
-    }
+  #exploreButton {
+  
+     text-decoration: none;
+     width: auto;
+     color: #fff;
+     border: solid 1px $color-Primaire;
+     border-radius: 100px;
+     padding: 15px 26px;
+     background-image: $button-gradient;
+     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+       &:hover{
+        background-color: lighten($color-Secondaire, 10%); // Utilisez une teinte plus claire pour l'effet hover
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
+     a{
+      text-decoration: none; 
+}
+h1 {
+  text-align: center;
+  font-size: 43px;
+  font-family: Roboto;
+}
+p{
+  font-size: 29px;
+  text-align: center;
+  font-family: Roboto;
 }
 }
+}
+
+
 /*... main...*/
 .main-container{
   @include flex-colum;
@@ -103,16 +81,16 @@ padding: 40px 0px;
     padding: 0 64px;
     .etape{
      @include flex-row-center;
+     flex-wrap: wrap;
       box-sizing: border-box;
       gap: 42px;
       .link-fonctionnement{
-        width: 33%;
+        width: 67%;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 18px;
+        color: $color-text;
         .choix{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex-row-center;
         gap: 20px;
         border: solid 1px $color-back;
         border-radius: 18px;
@@ -120,15 +98,22 @@ padding: 40px 0px;
         width: 100%;
         padding:9px 22px 9px 0px;
         background-color: $color-back;
+        .fa-shop{
+          color:$color-Primaire ;
+        }
        
         .nembar{
-          border: solid 1px $color-end;
+          border: solid 1px $color-Primaire;
           width: 16px;
           height:7px;
-          padding: 7px 0px 9px 8px;
+          padding: 8px 0px 10px 11px;
           border-radius: 100%;
-          background-color: $color-end;
+          background-color: $color-Primaire;
           font-size: 8px;
+          color: #fff;
+          position:relative;
+          padding-left: -30px;
+          
         }
       }
       }
@@ -139,19 +124,39 @@ padding: 40px 0px;
    .restaurants{
    @include flex-colum;
     background-color: $color-back;
-    padding: 0 64px;
+    padding: 0 13px;
     justify-content: center;
+    .title-restau{
+  padding-left: 6%;
+    }
    .box-restaurants{
    @include box-restaurants;
+   justify-content: center;
     .link-restau{
-      width: 46%;
+      width: 100%;
       text-decoration: none;
       color: $color-text;
       font-size: 17px;
+      
      .fa-heart{
+      transition: color 0.3s ease;
+      position: relative;
       &:hover{
-        background-color: $color-end;
+        background-color: $color-Secondaire;
       }
+      &::after {
+        content: '\f004'; // Le caractère FontAwesome pour un cœur plein
+        font-family: "Font Awesome 5 Free"; // Assurez-vous que cela correspond à votre importation de FontAwesome
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
      }
     }
     .arti-restau{
@@ -171,7 +176,7 @@ padding: 40px 0px;
     }
    }
 }
-} 
+
       .fa-heart{
        @include article-awsom;
       }
@@ -186,27 +191,31 @@ padding: 40px 0px;
       }
     }
     /*.. partie footre..*/
-      footer{
-        background-color: rgb(0, 0, 0);
-        @include flex-row;
-        justify-content: flex-end;
+        
+    footer{
+        background-color: #353535;
+        @include colum-renverse;
+        padding:22px 16px 26px 0px; ;
+        justify-content: end;
         .menu-nav{
-        @include flex-row-center;
-        gap: 10px;
-        gap: 46px;
-      
-        .nav-end{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap:18px;
-          
-          .propo-deveni{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-          
+        @include colum-renverse;
+        gap: 18px;
+        padding-left: 20px;
+      .nav-end{
+      @include flex-colum;
+        gap:7px;
+      }
+       .propo-deveni{
+            @include flex-colum;
+            gap: 2px;
+         
+            .fa-handshake-angle{
+              transform: translateX(-1px) rotate(-19deg) translateY(2px);
+              font-size: 15px;
+            }
+            .fa-utensils{
+              font-size: 23px;
+            }
             }  
             .link-nav{
               text-decoration: none;
@@ -215,21 +224,24 @@ padding: 40px 0px;
               display: flex;
               align-items: center;
               gap: 8px;
+              p{
+                margin: 3px;
+                padding: auto;
+              }
             }
           .mention-contact{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+           @include flex-colum;
             gap: 9px;
           }  
-          }
+        
 
         }
          
-      .logo-footer{
+        .logo-footer{
           filter: brightness(0) invert(1);
-          width: 20%; 
+          width: 62px; 
       }
+    
       }
      
       /*...les page html..*/
@@ -238,13 +250,18 @@ padding: 40px 0px;
      header{
         display: flex;
         .link-header{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          margin-right: 30px;
+         @include flex-row-center;
+         padding: 7px;
+         width: 100%;
+         gap: 100px;
+         .logo{
+          width:150px;
+         }
           .link-retour{
-          position: relative;
-          padding-right: 400px;
+            .fa-arrow-left-long{
+              width: 50px;
+            }
+         
           }
         } 
         .header-img{
@@ -258,10 +275,27 @@ padding: 40px 0px;
       .menus-container{
         display: flex;
         flex-direction: column;
-        padding: 0 150px;
+        padding: 0px;
        justify-content: center;
        box-sizing: border-box;
-        
+       .entrées,
+       .plat,
+       .dessert {
+         animation: fadeIn 0.5s ease forwards;
+         opacity: 0; // Démarre l'animation avec l'élément invisible
+       }
+       
+       .entrées {
+         animation-delay: 0.2s; // Démarrage de l'animation après 0.2 secondes
+       }
+       
+       .plat {
+         animation-delay: 0.4s; // Démarrage de l'animation après 0.4 secondes
+       }
+       
+       .dessert {
+         animation-delay: 0.6s; // Démarrage de l'animation après 0.6 secondes
+       }
          .sections-menus{
           @include flex-colum;
           @include border-top;
@@ -271,6 +305,8 @@ padding: 40px 0px;
           background-color: $color-back;
           padding:0 30px;
           box-sizing: border-box; 
+          position: relative;
+          top: -30px;
           .restaurant-intro{
               display: flex;
               flex-direction: row;
@@ -287,108 +323,184 @@ padding: 40px 0px;
                 text-shadow: 1px 1px 0 #101010;
                }
             }
+
+
           .menu-category-entrées{
             display: $display;
             flex-direction: column;
             gap: 40px;
-           
             .entrées{
-              display:$display;
-              flex-direction: column;
+             @include flex-row-center;
+             justify-content: space-between;
               @include border;
               padding: 12px 23px 12px 27px;
+              @include choix-menu;
               h3{
                 margin: 0;
               }
-              .price{
-          display: $display;
-          justify-content: space-between;
-          gap: 92px;
+         
+          }
           p{
             margin: 0;
           }     
      }
+
+
      .menu-category-plats{
   display: $display;
   flex-direction: column;
   gap: 30px;
   .plats{
-    display:$display;
-    flex-direction: column;
+  @include flex-row;
     @include border;
     padding: 12px 23px 12px 27px;
     h3{
       margin: 0;
     }
-    .price{
-display: $display;
-justify-content: space-between;
-gap: 92px;
+ 
 p{
   margin: 0;
 } 
     }
   }
-}    
-    }       
-  }
+    
+      
+  
   .menu-category-plats{
-    display: $display;
-    flex-direction: column;
+  @include flex-colum;
     gap: 30px;
     .plat{
-      display:$display;
-      flex-direction: column;
+    @include flex-row;
+    align-items: center;
       @include border;
       padding: 12px 23px 12px 27px;
+      justify-content: space-between;
       h3{
         margin: 0;
       }
-      .price{
-  display: $display;
-  justify-content: space-between;
-  gap: 92px;
+   
   p{
     margin: 0;
   } 
       }
     }
-  }
+  
+
   .menu-category-desserts{
-    display: $display;
-    flex-direction: column;
+      @include flex-colum;
     gap: 30px;
     .dessert{
-      display:$display;
-      flex-direction: column;
+      @include flex-row;
+      align-items: center;
       @include border;
       padding: 12px 23px 12px 27px;
+      justify-content: space-between;
       h3{
         margin: 0;
         padding-left: 3px;
-}
+       }
+      
+      }  
+     
+    }
+    .price{
+      @include flex-colum;
+       gap: 2px;
+       .choise{
+        @include flex-row;
+       } 
       }
-      .price{
-  display: $display;
-  justify-content: space-between;
-  gap: 92px;
+      .entrées {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background: #FFF;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    
+    
+   .price h3,.price p {
+        margin: 0;
+    }
+    
+    .choise {
+        display: flex;
+        align-items: center;
+    }
+    
+    .select-checkbox {
+        display: none; /* Hide the checkbox */
+    }
+    
+    .menu-select {
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .select-icon {
+        display:block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgb(8, 209, 35);
+        position: absolute;
+        right: 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(24px); /* Initial position off to the right */
+        z-index: 0;
+    }
+    
+    .select-checkbox:checked + .select-icon {
+        transform: translateX(0); /* Slide in on check */
+        background: #4CAF50; /* Color when active */
+    }
+    
+    .select-checkbox:checked + .select-icon::after {
+        content: "\2713"; /* Unicode check mark */
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        z-index: 1;
+    }
+    
+    .menu-price span {
+        z-index: 2;
+    }
+       .commander-btn{
+      @include btn-list;
+       margin:30px 0px;
+    }   
+   h2{
+    @include effets-h2; 
+   }
+  }
+  
   p{
     margin: 0;
   } 
-      }
-    }
-    .commander-btn{
-      @include btn-list;
-       margin:30px 0px;
       
+    
+  
+   
       a{
         text-decoration: none;
         color: #fff; 
        
-      }
+      } 
+    
     }
-  }          
-}     
-}      
+  }
 
-     
+@import "./media-queris.scss"
+    
+ 
+  
