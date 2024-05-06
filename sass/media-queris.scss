@@ -1,3 +1,4 @@
+// Destock
 @media (min-width:915px){
     /*... page d'acceuil ..*/
     // en tête
@@ -13,8 +14,12 @@
       height: 45px;
       padding: 24px 0px;  
      }
+     .logo-carte{
+      border: none;
+     }
      .btn-h1{
       padding: 26px 27px;
+      width: 100%;
         h1{
             text-align: center;
             font-size: 43px; 
@@ -57,12 +62,14 @@ footer{
     
   .nav-end{
   @include flex-row-center;
-    gap:50px;
+    gap: 37px;
+    font-size: 12px;
   }
    .propo-deveni{
         @include flex-row-center;
         gap: 16px;
         padding-left: 15px;
+        font-size: 13px;
         .link-nav{
         p{
             margin: 0;
@@ -74,6 +81,7 @@ footer{
       .mention-contact{
        @include flex-row-center;
         gap: 9px;
+        font-size: 11px;
       }  
     
 
@@ -82,16 +90,126 @@ footer{
       width: 30%;
     .logo-footer{
       filter: brightness(0) invert(1);
-      width: 48%; 
+      width: 69%; 
   }
 }
   }
-  //les pages
-  .menu{
-    .menus-container{
-        padding: 0 150px;
-        display: flex;
+  .menu header .link-header{
+    justify-content: space-between;
+  }
+  .menu .menus-container .restaurant-intro{
+  padding: 0 150px;
+  .menu-category-entrées, .menu-category-plats, .menu-category-desserts{
+    width: 59%;
+  }
+ }
+}
+// media tablette 
+@media (min-width:700px){
+     /*... page d'acceuil ..*/
+    // en tête
+    header{
+      .link-header{
         justify-content: space-between;
+     .logo-men{
+      width: 80px;
+     }
     }
-  } 
+     .logo-tête{
+      width: 22%;
+      height: 45px;
+      padding: 24px 0px;  
+     }
+     .logo-carte{
+      border: none;
+     }
+     .btn-h1{
+      padding: 26px 27px;
+      width: 100%;
+        h1{
+            text-align: center;
+            font-size: 43px; 
+        }
+     }
+
+    }
+    /*.. coreps de site ..*/
+    .main-container{
+        // fonctionnement  
+    .fonctionnement{
+      gap: 20px;
+      padding: 0 52px;
+      box-sizing: border-box;
+    .etape{
+      @include flex-row-center;
+      gap: 29px;
+        .link-fonctionnement{
+            width: 25%;
+            font-size: 13px;
+       } 
+     }
+    }
+    // restorant to viste
+    .restaurants{
+      padding: 0px 20px;
+    .box-restaurants{
+        .link-restau{
+            width:44% ;
+        }
+    }
+  }
+}
+/*... pied du site */
+footer{ 
+    @include flex-row-center;
+   
+    .menu-nav{
+    @include flex-row-center;
+    gap: 49px;
+    
+  .nav-end{
+  @include flex-row-center;
+    gap: 37px;
+    font-size: 12px;
+  }
+   .propo-deveni{
+        @include flex-row-center;
+        gap: 16px;
+        padding-left: 15px;
+        font-size: 13px;
+        .link-nav{
+        p{
+            margin: 0;
+        }     
+        }
+       
+        }  
+       
+      .mention-contact{
+       @include flex-row-center;
+        gap: 9px;
+        font-size: 11px;
+      }  
+    
+
+    }
+     .logo-en-page{
+      width: 30%;
+    .logo-footer{
+      filter: brightness(0) invert(1);
+      width: 69%; 
+  }
+}
+  }
+}
+.menu{
+  .head-pag .link-header{
+    justify-content: space-between;
+  }
+  .menu .menus-container .restaurant-intro{
+  padding: 0 120px;
+  .menu-category-entrées, .menu-category-plats, .menu-category-desserts{
+    width: 79%;
+  }
+ }
 }

@@ -1,7 +1,8 @@
- //variable
- $color-start: #9356DC;
- $color-end: #FF79DA;
- $button-gradient: linear-gradient(to right, $color-start 0%, $color-end 100%);
+ //variable colors
+ $color-Primaire: #9356DC;
+ $color-Secondaire: #FF79DA;
+ $color-Tertiaire: #99E2D0;
+ $button-gradient: linear-gradient(to right, $color-Primaire 0%, $color-Secondaire 100%);
  //variable boutton
  $menu-bg-color: white;
  $transition-duration: 0.5s;
@@ -9,9 +10,11 @@
  $color-btn: #F3F3F3;
  $color-text: #101010;
  $color-carte: #868686;
- $logo-width: 25%;
- $logo-height: 49px;
+ $logo-width: 40%;
+ $logo-height: 36px;
  $shadow-btn: 0 4px 8px rgba(0, 0, 0, 0.1);
  $color-back:#F6F6F6;
  $display: flex;
- // Mixins-page
+ // variable-Police
+$polices-logo-title:Shrikhand;
+$polices-texte:Roboto;

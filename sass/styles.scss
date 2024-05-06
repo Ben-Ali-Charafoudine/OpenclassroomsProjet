@@ -6,17 +6,17 @@
   justify-content: center;
   flex-direction: column;
   margin: 0;
+  font-family: $polices-texte;
  }
 /*.. Entête..*/
 header{
   @include flex-colum;
+  align-items: center;
   .logo-tête{
     width: $logo-width;
     height: $logo-height;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: roboto;
+    font-family: $polices-logo-title;
+    padding: 11px 0px;
   }
   .logo-carte{
     @include cart;
@@ -36,6 +36,10 @@ background-color: $color-back;
 padding: 40px 0px;
   text-align: center;
   padding: 0 27px;
+  p{
+    margin-top: 0;
+  margin-bottom: 35px;
+  }
     }
   #exploreButton {
   
@@ -47,6 +51,7 @@ padding: 40px 0px;
      padding: 15px 26px;
      background-image: $button-gradient;
      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+     margin-bottom: 45px;
        &:hover{
         background-color: lighten($color-Secondaire, 10%); // Utilisez une teinte plus claire pour l'effet hover
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -57,7 +62,6 @@ padding: 40px 0px;
 h1 {
   text-align: center;
   font-size: 43px;
-  font-family: Roboto;
 }
 p{
   font-size: 29px;
@@ -79,24 +83,26 @@ p{
     width: 100%;
     margin: 35px 0px;
     padding: 0 64px;
+    box-sizing: border-box;
     .etape{
-     @include flex-row-center;
-     flex-wrap: wrap;
+     @include flex-colum;
       box-sizing: border-box;
-      gap: 42px;
+      gap:42px;
+      width: 100%;
       .link-fonctionnement{
-        width: 67%;
         text-decoration: none;
         font-size: 18px;
         color: $color-text;
+        box-sizing: border-box;
+        flex-grow: 1;
         .choix{
         @include flex-row-center;
-        gap: 20px;
+        gap: 10px;
         border: solid 1px $color-back;
         border-radius: 18px;
         box-shadow: $shadow-btn;
-        width: 100%;
-        padding:9px 22px 9px 0px;
+       ;
+        padding:9px ;
         background-color: $color-back;
         .fa-shop{
           color:$color-Primaire ;
@@ -104,15 +110,15 @@ p{
        
         .nembar{
           border: solid 1px $color-Primaire;
-          width: 16px;
-          height:7px;
-          padding: 8px 0px 10px 11px;
+          width: 24px;
+          line-height: 24px;
+          text-align: center;
           border-radius: 100%;
           background-color: $color-Primaire;
-          font-size: 8px;
+          font-size: 9px;
           color: #fff;
           position:relative;
-          padding-left: -30px;
+          margin-left: -21px;
           
         }
       }
@@ -127,7 +133,7 @@ p{
     padding: 0 13px;
     justify-content: center;
     .title-restau{
-  padding-left: 6%;
+  padding-left: 4%;
     }
    .box-restaurants{
    @include box-restaurants;
@@ -195,7 +201,7 @@ p{
     footer{
         background-color: #353535;
         @include colum-renverse;
-        padding:22px 16px 26px 0px; ;
+        padding: 20px 34px 26px 0px; 
         justify-content: end;
         .menu-nav{
         @include colum-renverse;
@@ -211,10 +217,10 @@ p{
          
             .fa-handshake-angle{
               transform: translateX(-1px) rotate(-19deg) translateY(2px);
-              font-size: 15px;
+              font-size: 9px;
             }
             .fa-utensils{
-              font-size: 23px;
+              font-size: 11px;
             }
             }  
             .link-nav{
@@ -234,7 +240,6 @@ p{
             gap: 9px;
           }  
         
-
         }
          
         .logo-footer{
@@ -245,262 +250,160 @@ p{
       }
      
       /*...les page html..*/
-     .menu{
-      background-color: #fff;
-     header{
-        display: flex;
-        .link-header{
-         @include flex-row-center;
-         padding: 7px;
-         width: 100%;
-         gap: 100px;
-         .logo{
-          width:150px;
-         }
-          .link-retour{
-            .fa-arrow-left-long{
-              width: 50px;
-            }
-         
-          }
-        } 
-        .header-img{
-        width: 100%;
+    .menu{
+      image{
         object-fit: cover;
+        width: 100%;
         height: 383px;
-       
-      
       }
+     .menu-title{
+     font-family: $polices-logo-title;
+     font-size:22px ;
       }
-      .menus-container{
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-       justify-content: center;
-       box-sizing: border-box;
-       .entrées,
-       .plat,
-       .dessert {
-         animation: fadeIn 0.5s ease forwards;
-         opacity: 0; // Démarre l'animation avec l'élément invisible
-       }
-       
-       .entrées {
-         animation-delay: 0.2s; // Démarrage de l'animation après 0.2 secondes
-       }
-       
-       .plat {
-         animation-delay: 0.4s; // Démarrage de l'animation après 0.4 secondes
-       }
-       
-       .dessert {
-         animation-delay: 0.6s; // Démarrage de l'animation après 0.6 secondes
-       }
-         .sections-menus{
-          @include flex-colum;
-          @include border-top;
-          box-shadow: $shadow-btn;
-          width: 100%;
-          align-items: center;
-          background-color: $color-back;
-          padding:0 30px;
-          box-sizing: border-box; 
-          position: relative;
-          top: -30px;
-          .restaurant-intro{
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              gap: 20px;
-              .menu-title{
-                font-family:'shrikhand'  ;
-                color: #101010;
-                font-size: 28px;
-                font-style: italic;
-                font-weight: bolder;
-                line-height: 40.82px;
-                text-align: left;
-                text-shadow: 1px 1px 0 #101010;
-               }
-            }
-
-
-          .menu-category-entrées{
-            display: $display;
-            flex-direction: column;
-            gap: 40px;
-            .entrées{
-             @include flex-row-center;
-             justify-content: space-between;
-              @include border;
-              padding: 12px 23px 12px 27px;
-              @include choix-menu;
-              h3{
-                margin: 0;
-              }
-         
-          }
-          p{
-            margin: 0;
-          }     
-     }
-
-
-     .menu-category-plats{
-  display: $display;
-  flex-direction: column;
-  gap: 30px;
-  .plats{
-  @include flex-row;
-    @include border;
-    padding: 12px 23px 12px 27px;
-    h3{
-      margin: 0;
-    }
- 
-p{
-  margin: 0;
-} 
-    }
-  }
-    
-      
-  
-  .menu-category-plats{
-  @include flex-colum;
-    gap: 30px;
-    .plat{
-    @include flex-row;
-    align-items: center;
-      @include border;
-      padding: 12px 23px 12px 27px;
-      justify-content: space-between;
+      h2{
+        font-family: $polices-texte;
+        font-weight: normal;
+        font-size: 19px;
+        @include effets-h2;
+      }
       h3{
+        font-family: $polices-texte;
+        font-weight: 500;
+        font-size: 18px;
         margin: 0;
       }
-   
-  p{
-    margin: 0;
-  } 
+      p{
+       @include police-font;
+       margin: 0;
       }
-    }
-  
-
-  .menu-category-desserts{
-      @include flex-colum;
-    gap: 30px;
-    .dessert{
-      @include flex-row;
-      align-items: center;
-      @include border;
-      padding: 12px 23px 12px 27px;
-      justify-content: space-between;
-      h3{
-        margin: 0;
-        padding-left: 3px;
-       }
-      
-      }  
-     
-    }
-    .price{
-      @include flex-colum;
-       gap: 2px;
-       .choise{
-        @include flex-row;
-       } 
-      }
-      .entrées {
+      span{
+        @include police-font;
+        font-weight: 700;
         display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        background: #FFF;
-        border-radius: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
-        align-items: center;
-    }
-    
-    
-   .price h3,.price p {
-        margin: 0;
-    }
-    
-    .choise {
-        display: flex;
-        align-items: center;
-    }
-    
-    .select-checkbox {
-        display: none; /* Hide the checkbox */
-    }
-    
-    .menu-select {
-        display: inline-block;
-        margin-left: 15px;
+        justify-content: flex-end;
+        align-items: end;
         position: relative;
-        width: 24px;
-        height: 24px;
+        bottom: -15px;
+      } 
+        // en tête
+      .head-pag{
+        display: flex;
+        box-sizing: border-box;
+        align-items: start;
+        .link-header{
+          @include flex-row-center;
+          padding: 9px 40px;
+          width: 55%;
+          gap: 109px;
+          justify-content: center;
+          .logo{
+            width:150px; 
+          }
+        }
+        .header-img{
+          width: 100%;
+          height: 343px;
+          object-fit: cover;
+        }
+      }
+
+      // menus-container
+      .menus-container{
+        
+        .restaurant-intro{
+         .bloc-articles{
+              display: flex;
+             flex-direction: column;
+              gap: 20px;
+            }
+        }
+        .sections-menus{
+          gap: 30px;   
+           @include flex-colum;
+          align-items: center;
+          width: 100%;
+          border: solid 1px #f6f6f6;
+          border-top-left-radius: 42px;
+          border-top-right-radius: 42px;
+          background: #f6f6f6;
+          position: relative;
+          margin-top: -28px;
+        }
+        .title-menu{
+          display: $display;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;  
+        }
+        
+        //section menu-page
+        
+          .menu-category-entrées, .menu-category-plats, .menu-category-desserts{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            width: 100%;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 2px;
+            box-sizing: border-box;
+            padding: 0 30px;
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+          }
+          .menu-category-entrées{
+            animation-delay: 1s;
+          }
+          .menu-category-plats{
+            animation-delay: 3s;
+          }
+          .menu-category-desserts{
+            animation-delay: 5s;
+          }
+          
+            .entrées,.plat,.dessert{
+          @include entre-plats-desserts;
+          animation: fadeIn 0.5s ease forwards;
+          opacity: 0; 
+              .price{
+                @include flex-colum;
+                gap: 6px;
+                
+          }
+        
+        }
+      
+      .entrées {
+        animation-delay: 2s; 
+      }
+      
+      .plat {
+        animation-delay: 4s; 
+      }
+      .dessert {
+               animation-delay: 6s; 
+             }
+
+      } 
+      .commander-btn{
+      text-align: center;
+      padding-bottom: 40px;
+      #commande{
+      text-decoration: none;
+       width: auto;
+       color: #fff;
+       border: solid 1px #9356DC;
+       border-radius: 100px;
+       padding: 11px 26px;
+       background-image: linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+       transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
     }
-    
-    .select-icon {
-        display:block;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: rgb(8, 209, 35);
-        position: absolute;
-        right: 0;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(24px); /* Initial position off to the right */
-        z-index: 0;
-    }
-    
-    .select-checkbox:checked + .select-icon {
-        transform: translateX(0); /* Slide in on check */
-        background: #4CAF50; /* Color when active */
-    }
-    
-    .select-checkbox:checked + .select-icon::after {
-        content: "\2713"; /* Unicode check mark */
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 16px;
-        z-index: 1;
-    }
-    
-    .menu-price span {
-        z-index: 2;
-    }
-       .commander-btn{
-      @include btn-list;
-       margin:30px 0px;
-    }   
-   h2{
-    @include effets-h2; 
-   }
-  }
+      }//fin du body
+       
   
-  p{
-    margin: 0;
-  } 
       
     
-  
-   
-      a{
-        text-decoration: none;
-        color: #fff; 
-       
-      } 
-    
-    }
-  }
-
+     
 @import "./media-queris.scss"
     
- 
-  
