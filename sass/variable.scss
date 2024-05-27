@@ -2,7 +2,8 @@
  $color-Primaire: #9356DC;
  $color-Secondaire: #FF79DA;
  $color-Tertiaire: #99E2D0;
- $button-gradient: linear-gradient(to right, $color-Primaire 0%, $color-Secondaire 100%);
+ $button-gradient: linear-gradient(to top, $color-Primaire 20%, $color-Secondaire 100%);
+ $button-gradiente: linear-gradient(to bottom,$color-Secondaire 40% ,$color-Primaire 100%);
  //variable boutton
  $menu-bg-color: white;
  $transition-duration: 0.5s;

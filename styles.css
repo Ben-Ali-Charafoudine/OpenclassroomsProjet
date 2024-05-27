@@ -95,14 +95,15 @@ header #exploreButton {
   border: solid 1px #9356DC;
   border-radius: 100px;
   padding: 15px 26px;
-  background-image: linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+  background-image: linear-gradient(to top, #9356DC 20%, #FF79DA 100%);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 45px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 header #exploreButton:hover {
-  background: #fface8;
+  background-image: linear-gradient(to bottom, #FF79DA 40%, #9356DC 100%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: solid 1px #FF79DA;
+  border: solid 1px #FF79DA, 10%;
 }
 header #exploreButton a {
   text-decoration: none;
@@ -239,7 +240,7 @@ header #exploreButton p {
   mask-repeat: no-repeat;
 }
 .title .paragraphe .mask:hover {
-  background: #FF79DA;
+  background: linear-gradient(to top, #9356DC 20%, #FF79DA 100%);
   -webkit-mask-image: url(./images/heart-solid.svg);
 }
 .title .paragraphe p {
@@ -400,7 +401,7 @@ footer .logo-footer {
   mask-repeat: no-repeat;
 }
 .menu .menus-container .title-menu .mask:hover {
-  background: #FF79DA;
+  background-image: linear-gradient(to top, #9356DC 20%, #FF79DA 100%);
   -webkit-mask-image: url(./images/heart-solid.svg);
 }
 .menu .menus-container .menu-category-entrées, .menu .menus-container .menu-category-plats, .menu .menus-container .menu-category-desserts {
@@ -515,9 +516,18 @@ footer .logo-footer {
   color: #fff;
   border: solid 1px #9356DC;
   border-radius: 100px;
-  padding: 11px 26px;
-  background-image: linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+  padding: 15px 26px;
+  background-image: linear-gradient(to top, #9356DC 20%, #FF79DA 100%);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 45px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 13px 39px;
+  font-size: 20px;
+}
+.menu .commander-btn #commande:hover {
+  background-image: linear-gradient(to bottom, #FF79DA 40%, #9356DC 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: solid 1px #FF79DA, 10%;
 }
 
 @media (min-width: 768px) {

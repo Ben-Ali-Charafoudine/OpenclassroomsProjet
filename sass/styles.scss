@@ -44,21 +44,8 @@ padding: 40px 0px;
   }
     }
   #exploreButton {
-  
-     text-decoration: none;
-     width: auto;
-     color: #fff;
-     border: solid 1px $color-Primaire;
-     border-radius: 100px;
-     padding: 15px 26px;
-     background-image: $button-gradient;
-     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-     margin-bottom: 45px;
-       &:hover{
-        background: lighten($color-Secondaire, 10%); // Utilisez une teinte plus claire pour l'effet hover
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        border: solid 1px $color-Secondaire;
-  }
+  @include boutton;
+   
      a{
       text-decoration: none; 
 }
@@ -179,7 +166,7 @@ p{
         -webkit-mask-image: url(./images/heart-regular.svg);
         mask-repeat: no-repeat;
         &:hover{
-          background: #FF79DA;
+          background: $button-gradient;
           -webkit-mask-image: url(./images/heart-solid.svg);
           
         }
@@ -339,7 +326,7 @@ p{
             -webkit-mask-image: url(./images/heart-regular.svg);
             mask-repeat: no-repeat;
             &:hover{
-              background: #FF79DA;
+              background-image:$button-gradient;
               -webkit-mask-image: url(./images/heart-solid.svg);
             }
            
@@ -452,14 +439,9 @@ p{
       text-align: center;
       padding-bottom: 40px;
       #commande{
-      text-decoration: none;
-       width: auto;
-       color: #fff;
-       border: solid 1px #9356DC;
-       border-radius: 100px;
-       padding: 11px 26px;
-       background-image: linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
-       transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      @include boutton;
+      padding: 13px 39px;
+      font-size: 20px;
       }
     }
       }//fin du body

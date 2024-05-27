@@ -43,7 +43,23 @@
       box-shadow: $shadow-btn;
     }
     //mixins-boutton
-    
+    @mixin boutton{
+      text-decoration: none;
+      width: auto;
+      color: #fff;
+      border: solid 1px $color-Primaire;
+      border-radius: 100px;
+      padding: 15px 26px;
+      background-image: $button-gradient;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 45px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        &:hover{
+         background-image: $button-gradiente; // Utilisez une teinte plus claire pour l'effet hover
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+         border: solid 1px ($color-Secondaire, 10%);
+   }
+    }
     //mixins-wrap
     @mixin flex-vrap{
       display: flex;
