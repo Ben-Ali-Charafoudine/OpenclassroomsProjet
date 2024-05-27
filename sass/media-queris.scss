@@ -1,5 +1,5 @@
-// Destock
-@media (min-width:915px){
+// medea tablel
+@media (min-width: 768px){
     /*... page d'acceuil ..*/
     // en tête
     header{
@@ -32,14 +32,15 @@
         // fonctionnement  
     .fonctionnement{
       gap: 20px;
-      padding: 0 56px;
+      padding: 0 51px;
       box-sizing: border-box;
     .etape{
       @include flex-row-center;
       flex-wrap: nowrap;
         .link-fonctionnement{
             width: 32%;
-            font-size: 18px;
+            font-size: 13px;
+           
        } 
      }
     }
@@ -93,19 +94,33 @@ footer{
       width: 69%; 
   }
 }
+
+  }
+  // menu pages
+  .menu h2{
+    width: 8%; 
   }
   .menu header .link-header{
     justify-content: space-between;
   }
   .menu .menus-container .restaurant-intro{
-  padding: 0 150px;
+  padding: 0 100px;
+
   .menu-category-entrées, .menu-category-plats, .menu-category-desserts{
-    width: 59%;
+    width: 85%;
+    padding: 0 30px;
+  }
+  .choix{
+   width: 7%;
+   .font{
+    left: 16px;
+  } 
   }
  }
+
 }
-// media tablette 
-@media (min-width:700px){
+// media destock 
+@media (min-width:1023px){
      /*... page d'acceuil ..*/
     // en tête
     header{
@@ -138,14 +153,15 @@ footer{
         // fonctionnement  
     .fonctionnement{
       gap: 20px;
-      padding: 0 52px;
+      padding: 0 67px;
       box-sizing: border-box;
     .etape{
       @include flex-row-center;
       gap: 29px;
+      width: 83%;
         .link-fonctionnement{
             width: 25%;
-            font-size: 13px;
+            font-size: 14px;
        } 
      }
     }
@@ -154,11 +170,13 @@ footer{
       padding: 0px 20px;
     .box-restaurants{
         .link-restau{
-            width:44% ;
+            width:44% ;   
         }
     }
-  }
+ 
 }
+
+ }
 /*... pied du site */
 footer{ 
     @include flex-row-center;
@@ -201,8 +219,10 @@ footer{
   }
 }
   }
-}
-.menu{
+  .menu{
+  h2{
+    width: 6%; 
+  }
   .head-pag .link-header{
     justify-content: space-between;
   }
@@ -212,4 +232,17 @@ footer{
     width: 79%;
   }
  }
+ .menu-category-entrées, .menu-category-plats, .menu-category-desserts{
+  width: 70%;
+  padding: 0 30px;
 }
+.choix{
+  width: 7%;
+  .font{
+    left: 16px;
+  } 
+ }
+}
+}
+//menu pages
+

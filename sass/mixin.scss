@@ -136,6 +136,7 @@
       align-items: center;
     }
     //mixin pages
+    /*...effe h2 au survole
     @mixin effets-h2{
      
       position: relative;
@@ -155,10 +156,25 @@
        transform: scaleX(1);
        border-bottom: solid 0.3rem $color-Tertiaire;
       }
+    }..*/
+
+    //mixin h2 normal sans sur vole
+
+    @mixin effets-h2{
+     
+      position: relative;
+      padding-bottom: 0.2rem;
+        bottom: 0;
+        left: 0;
+        width: 9%;
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-in-out;
+       transform: scaleX(1);
+       border-bottom: solid 0.3rem $color-Tertiaire;
     }
     @mixin police-font{
       font-family: $polices-texte;
-      font-size: 15.04px;
+      font-size: 13.04px;
     }
     //mixine les pages
     @mixin entre-plats-desserts{
@@ -166,13 +182,13 @@
       flex-direction: row;
       align-items: center;
       border: solid 1px #FFFFFF;
-      border-radius: 12px;
+      border-radius: 14px;
       background-color: #FFFFFF;
-      padding: 10px;
       justify-content: space-between;
      animation: fadeIn 0.5s ease forwards;
      opacity: 0;
      box-shadow: $shadow-btn;
+     gap: 3px;
     }
     @mixin menu-category{
       display: flex;
@@ -198,3 +214,13 @@
     @mixin choix-menu{
     
     }
+    @keyframes headshake {
+     0% {
+          // entièrement à droite
+          transition: translatey(2%);
+      }
+      100% {
+          // entièrement à gauche
+         transition: translateX(3%);
+      }
+  }

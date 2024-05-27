@@ -1,4 +1,25 @@
 @charset "UTF-8";
+/*...effe h2 au survole
+@mixin effets-h2{
+
+  position: relative;
+  padding-bottom: 0.2rem;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 7%;
+    background-color: green;
+    transform:scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover::after{
+   transform: scaleX(1);
+   border-bottom: solid 0.3rem $color-Tertiaire;
+  }
+}..*/
 @import "https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@400;500;700&display=swap";
 @keyframes fadeIn {
   from {
@@ -8,6 +29,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes headshake {
+  0% {
+    transition: translatey(2%);
+  }
+  100% {
+    transition: translateX(3%);
   }
 }
 body {
@@ -71,8 +100,9 @@ header #exploreButton {
   margin-bottom: 45px;
 }
 header #exploreButton:hover {
-  background-color: #fface8;
+  background: #fface8;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: solid 1px #FF79DA;
 }
 header #exploreButton a {
   text-decoration: none;
@@ -100,7 +130,7 @@ header #exploreButton p {
   align-items: flex-start;
   width: 100%;
   margin: 35px 0px;
-  padding: 0 64px;
+  padding: 0px 43px;
   box-sizing: border-box;
 }
 .main-container .fonctionnement .etape {
@@ -117,7 +147,7 @@ header #exploreButton p {
   box-sizing: border-box;
   flex-grow: 1;
 }
-.main-container .fonctionnement .etape .link-fonctionnement .choix {
+.main-container .fonctionnement .etape .link-fonctionnement .choise {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -128,10 +158,10 @@ header #exploreButton p {
   padding: 9px;
   background-color: #F6F6F6;
 }
-.main-container .fonctionnement .etape .link-fonctionnement .choix .fa-shop {
+.main-container .fonctionnement .etape .link-fonctionnement .choise .fa-shop {
   color: #9356DC;
 }
-.main-container .fonctionnement .etape .link-fonctionnement .choix .nembar {
+.main-container .fonctionnement .etape .link-fonctionnement .choise .nembar {
   border: solid 1px #9356DC;
   width: 24px;
   line-height: 24px;
@@ -147,7 +177,7 @@ header #exploreButton p {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  padding: 0 13px;
+  padding: 0px 19px;
   justify-content: center;
 }
 .main-container .restaurants .title-restau {
@@ -170,25 +200,6 @@ header #exploreButton p {
   color: #101010;
   font-size: 17px;
 }
-.main-container .restaurants .box-restaurants .link-restau .fa-heart {
-  transition: color 0.3s ease;
-  position: relative;
-}
-.main-container .restaurants .box-restaurants .link-restau .fa-heart:hover {
-  background-color: #FF79DA;
-}
-.main-container .restaurants .box-restaurants .link-restau .fa-heart::after {
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.main-container .restaurants .box-restaurants .link-restau .fa-heart:hover::after {
-  opacity: 1;
-}
 .main-container .restaurants .arti-restau {
   border: solid 1px white;
   border-radius: 20px;
@@ -209,11 +220,6 @@ header #exploreButton p {
   box-sizing: border-box;
 }
 
-.fa-heart {
-  display: flex;
-  justify-content: end;
-}
-
 .title {
   margin: 0px;
   padding: 20px;
@@ -223,6 +229,18 @@ header #exploreButton p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+.title .paragraphe .mask {
+  width: 19px;
+  height: 25px;
+  background-color: black;
+  mask-image: url(./images/heart-regular.svg);
+  -webkit-mask-image: url(./images/heart-regular.svg);
+  mask-repeat: no-repeat;
+}
+.title .paragraphe .mask:hover {
+  background: #FF79DA;
+  -webkit-mask-image: url(./images/heart-solid.svg);
 }
 .title .paragraphe p {
   margin: 0px;
@@ -297,42 +315,35 @@ footer .logo-footer {
   font-size: 19px;
   position: relative;
   padding-bottom: 0.2rem;
-}
-.menu h2::after {
-  content: "";
-  position: absolute;
   bottom: 0;
   left: 0;
-  width: 7%;
-  background-color: green;
-  transform: scaleX(0);
+  width: 9%;
   transform-origin: bottom left;
   transition: transform 0.3s ease-in-out;
-}
-.menu h2:hover::after {
   transform: scaleX(1);
   border-bottom: solid 0.3rem #99E2D0;
 }
 .menu h3 {
   font-family: Roboto;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 .menu p {
   font-family: Roboto;
-  font-size: 15.04px;
+  font-size: 13.04px;
   margin: 0;
 }
 .menu span {
   font-family: Roboto;
-  font-size: 15.04px;
+  font-size: 13.04px;
   font-weight: 700;
   display: flex;
   justify-content: flex-end;
   align-items: end;
   position: relative;
   bottom: -15px;
+  padding: 0 12px;
 }
 .menu .head-pag {
   display: flex;
@@ -380,6 +391,18 @@ footer .logo-footer {
   justify-content: center;
   gap: 24px;
 }
+.menu .menus-container .title-menu .mask {
+  width: 19px;
+  height: 25px;
+  background-color: black;
+  mask-image: url(./images/heart-regular.svg);
+  -webkit-mask-image: url(./images/heart-regular.svg);
+  mask-repeat: no-repeat;
+}
+.menu .menus-container .title-menu .mask:hover {
+  background: #FF79DA;
+  -webkit-mask-image: url(./images/heart-solid.svg);
+}
 .menu .menus-container .menu-category-entrées, .menu .menus-container .menu-category-plats, .menu .menus-container .menu-category-desserts {
   display: flex;
   flex-direction: column;
@@ -407,20 +430,71 @@ footer .logo-footer {
   flex-direction: row;
   align-items: center;
   border: solid 1px #FFFFFF;
-  border-radius: 12px;
+  border-radius: 14px;
   background-color: #FFFFFF;
-  padding: 10px;
   justify-content: space-between;
   animation: fadeIn 0.5s ease forwards;
   opacity: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 3px;
   animation: fadeIn 0.5s ease forwards;
   opacity: 0;
+  position: relative;
+  padding: 10px 16px;
+}
+.menu .menus-container .entrées:hover .choix, .menu .menus-container .plat:hover .choix, .menu .menus-container .dessert:hover .choix {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: right 1.1s ease, opacity 1.1s ease;
+}
+.menu .menus-container .entrées:hover span, .menu .menus-container .plat:hover span, .menu .menus-container .dessert:hover span {
+  transform: translateX(-76%);
+  transition: 1.1s;
 }
 .menu .menus-container .entrées .price, .menu .menus-container .plat .price, .menu .menus-container .dessert .price {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 76%;
+  padding-left: 8px;
+}
+.menu .menus-container .entrées .choix, .menu .menus-container .plat .choix, .menu .menus-container .dessert .choix {
+  background-color: #99E2D0;
+  position: absolute;
+  width: 11%;
+  height: 59px;
+  border: solid 1px #99E2D0;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  top: 0px;
+  right: -10%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease, right 0.5s ease;
+  visibility: hidden;
+}
+.menu .menus-container .entrées .choix input, .menu .menus-container .plat .choix input, .menu .menus-container .dessert .choix input {
+  position: relative;
+  top: 24px;
+  left: 0px;
+  display: none;
+}
+.menu .menus-container .entrées .choix .font, .menu .menus-container .plat .choix .font, .menu .menus-container .dessert .choix .font {
+  border: solid 1px #99E2D0;
+  border-radius: 100%;
+  color: #99E2D0;
+  background-color: #fff;
+  top: 20px;
+  left: 12px;
+  width: 22px;
+  line-height: 21px;
+  position: absolute;
+}
+.menu .menus-container .entrées .choix .fa-check, .menu .menus-container .plat .choix .fa-check, .menu .menus-container .dessert .choix .fa-check {
+  position: relative;
+  font-size: 13px;
+  color: #99E2D0;
 }
 .menu .menus-container .entrées {
   animation-delay: 2s;
@@ -446,7 +520,7 @@ footer .logo-footer {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (min-width: 915px) {
+@media (min-width: 768px) {
   /*... page d'acceuil ..*/
   header .link-header {
     justify-content: space-between;
@@ -473,7 +547,7 @@ footer .logo-footer {
   /*.. coreps de site ..*/
   .main-container .fonctionnement {
     gap: 20px;
-    padding: 0 56px;
+    padding: 0 51px;
     box-sizing: border-box;
   }
   .main-container .fonctionnement .etape {
@@ -484,7 +558,7 @@ footer .logo-footer {
   }
   .main-container .fonctionnement .etape .link-fonctionnement {
     width: 32%;
-    font-size: 18px;
+    font-size: 13px;
   }
   .main-container .restaurants .box-restaurants .link-restau {
     width: 44%;
@@ -533,17 +607,27 @@ footer .logo-footer {
     filter: brightness(0) invert(1);
     width: 69%;
   }
+  .menu h2 {
+    width: 8%;
+  }
   .menu header .link-header {
     justify-content: space-between;
   }
   .menu .menus-container .restaurant-intro {
-    padding: 0 150px;
+    padding: 0 100px;
   }
   .menu .menus-container .restaurant-intro .menu-category-entrées, .menu .menus-container .restaurant-intro .menu-category-plats, .menu .menus-container .restaurant-intro .menu-category-desserts {
-    width: 59%;
+    width: 85%;
+    padding: 0 30px;
+  }
+  .menu .menus-container .restaurant-intro .choix {
+    width: 7%;
+  }
+  .menu .menus-container .restaurant-intro .choix .font {
+    left: 16px;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 1023px) {
   /*... page d'acceuil ..*/
   header .link-header {
     justify-content: space-between;
@@ -570,7 +654,7 @@ footer .logo-footer {
   /*.. coreps de site ..*/
   .main-container .fonctionnement {
     gap: 20px;
-    padding: 0 52px;
+    padding: 0 67px;
     box-sizing: border-box;
   }
   .main-container .fonctionnement .etape {
@@ -578,10 +662,11 @@ footer .logo-footer {
     flex-direction: row;
     align-items: center;
     gap: 29px;
+    width: 83%;
   }
   .main-container .fonctionnement .etape .link-fonctionnement {
     width: 25%;
-    font-size: 13px;
+    font-size: 14px;
   }
   .main-container .restaurants {
     padding: 0px 20px;
@@ -633,15 +718,28 @@ footer .logo-footer {
     filter: brightness(0) invert(1);
     width: 69%;
   }
-}
-.menu .head-pag .link-header {
-  justify-content: space-between;
-}
-.menu .menu .menus-container .restaurant-intro {
-  padding: 0 120px;
-}
-.menu .menu .menus-container .restaurant-intro .menu-category-entrées, .menu .menu .menus-container .restaurant-intro .menu-category-plats, .menu .menu .menus-container .restaurant-intro .menu-category-desserts {
-  width: 79%;
+  .menu h2 {
+    width: 6%;
+  }
+  .menu .head-pag .link-header {
+    justify-content: space-between;
+  }
+  .menu .menu .menus-container .restaurant-intro {
+    padding: 0 120px;
+  }
+  .menu .menu .menus-container .restaurant-intro .menu-category-entrées, .menu .menu .menus-container .restaurant-intro .menu-category-plats, .menu .menu .menus-container .restaurant-intro .menu-category-desserts {
+    width: 79%;
+  }
+  .menu .menu-category-entrées, .menu .menu-category-plats, .menu .menu-category-desserts {
+    width: 70%;
+    padding: 0 30px;
+  }
+  .menu .choix {
+    width: 7%;
+  }
+  .menu .choix .font {
+    left: 16px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
