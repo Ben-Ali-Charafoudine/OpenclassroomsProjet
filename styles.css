@@ -680,9 +680,6 @@ footer .logo-footer {
   .menu .menus-container .restaurant-intro .choix {
     width: 7%;
   }
-  .menu .menus-container .restaurant-intro .choix .font {
-    left: 16px;
-  }
 }
 @media (min-width: 1023px) {
   /*... page d'acceuil ..*/
@@ -793,9 +790,6 @@ footer .logo-footer {
   }
   .menu .choix {
     width: 7%;
-  }
-  .menu .choix .font {
-    left: 16px;
   }
 }
 
