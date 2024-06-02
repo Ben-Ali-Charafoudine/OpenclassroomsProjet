@@ -158,20 +158,48 @@ p{
        @include article-titl;
        .paragraphe{
        @include article-p;
-       .mask{
+
+       .mask {
         width: 19px;
-        height:25px;
-        background-color:black;
-        mask-image: url(./images/heart-regular.svg);
-        -webkit-mask-image: url(./images/heart-regular.svg);
-        mask-repeat: no-repeat;
-        &:hover{
-          background: $button-gradient;
-          -webkit-mask-image: url(./images/heart-solid.svg);
-          
-        }
+  height: 25px;
+  background-color: black;
+  mask-image: url(./images/heart-regular.svg);
+  -webkit-mask-image: url(./images/heart-regular.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background: none;
+    -webkit-mask-image: url(./images/heart-solid.svg);
+    
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; // Start with height 0
+    background: $button-gradient;
+    mask-image: url(./images/heart-solid.svg);
+    -webkit-mask-image: url(./images/heart-solid.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    transition: height 0.9s ease; // Transition for height change
+    opacity: 1;
+  }
+
+  &:hover::after {
+    height: 100%; // Animate to full height on hover
+  }
+      }
+
        
-       }
+
+     
         p{
           margin: 0px;
         }
@@ -267,6 +295,7 @@ p{
         position: relative;
         bottom: -15px;
         padding: 0 12px;
+        transition: 1.2s;
       } 
         // en tête
       .head-pag{
@@ -318,20 +347,44 @@ p{
           align-items: center;
           justify-content: center;
           gap: 24px;
-          .mask{
+
+          .mask {
             width: 19px;
-            height:25px;
-            background-color:black;
-            mask-image: url(./images/heart-regular.svg);
-            -webkit-mask-image: url(./images/heart-regular.svg);
-            mask-repeat: no-repeat;
-            &:hover{
-              background-image:$button-gradient;
-              -webkit-mask-image: url(./images/heart-solid.svg);
-            }
-           
-           } 
-     
+      height: 25px;
+      background-color: black;
+      mask-image: url(./images/heart-regular.svg);
+      -webkit-mask-image: url(./images/heart-regular.svg);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      opacity: 1;
+      position: relative;
+      overflow: hidden;
+    
+      &:hover {
+        background: none;
+        -webkit-mask-image: url(./images/heart-solid.svg);
+        
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0; // Start with height 0
+        background: $button-gradient;
+        mask-image: url(./images/heart-solid.svg);
+        -webkit-mask-image: url(./images/heart-solid.svg);
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        transition: height 0.9s ease; // Transition for height change
+        opacity: 1;
+      }
+    
+      &:hover::after {
+        height: 100%; // Animate to full height on hover
+      }
+          }
         }
         
         //section menu-page
@@ -369,7 +422,7 @@ p{
             right: 0;
             opacity: 1;
             visibility: visible;
-            transition: right 1.1s ease, opacity 1.1s ease;
+            transition: right 1.1s ease, opacity 2.1s ease;
            } 
            &:hover span {
             transform:translateX(-76%);
@@ -394,8 +447,12 @@ p{
           text-align: center;
           cursor: pointer;
           transition: transform 0.5s ease, right 0.5s ease;
-          visibility: hidden;
-            
+          display: flex;
+          align-items: center;
+          justify-content: center;
+           visibility: hidden; 
+           opacity: -0.5;
+           transition: 1.2s;
           input{
             position: relative;
             top: 24px;
@@ -407,11 +464,9 @@ p{
             border-radius: 100%;
             color: #99E2D0;
              background-color: #fff;
-             top: 20px;
-             left: 12px;
              width: 22px;
              line-height: 21px;
-             position: absolute;
+            
           }
           .fa-check{
             position: relative;
