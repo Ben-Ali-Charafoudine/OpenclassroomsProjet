@@ -397,7 +397,7 @@ footer .logo-footer {
   gap: 20px;
 }
 .menu .menus-container .sections-menus {
-  gap: 30px;
+  gap: 42pxpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -461,6 +461,7 @@ footer .logo-footer {
   padding: 0 30px;
   animation: fadeIn 0.5s ease forwards;
   opacity: 0;
+  margin-bottom: 19px;
 }
 .menu .menus-container .menu-category-entrées {
   animation-delay: 1s;
@@ -509,7 +510,7 @@ footer .logo-footer {
   background-color: #99E2D0;
   position: absolute;
   width: 14%;
-  height: 60px;
+  height: 100%;
   border: solid 1px #99E2D0;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
@@ -675,10 +676,11 @@ footer .logo-footer {
   }
   .menu .menus-container .restaurant-intro .menu-category-entrées, .menu .menus-container .restaurant-intro .menu-category-plats, .menu .menus-container .restaurant-intro .menu-category-desserts {
     width: 85%;
-    padding: 0 30px;
+    padding: 0 45px;
   }
   .menu .menus-container .restaurant-intro .choix {
-    width: 5.6%;
+    width: 9.6%;
+    height: 100%;
   }
 }
 @media (min-width: 1023px) {
@@ -772,8 +774,12 @@ footer .logo-footer {
     filter: brightness(0) invert(1);
     width: 69%;
   }
+  .menu {
+    .width: 9.6%;
+    height: 100%;
+  }
   .menu h2 {
-    width: 6%;
+    width: 11%;
   }
   .menu .head-pag .link-header {
     justify-content: space-between;
@@ -786,10 +792,7 @@ footer .logo-footer {
   }
   .menu .menu-category-entrées, .menu .menu-category-plats, .menu .menu-category-desserts {
     width: 70%;
-    padding: 0 30px;
-  }
-  .menu .choix {
-    width: 7%;
+    padding: 0 45px;
   }
 }
 

@@ -330,7 +330,7 @@ p{
             }
         }
         .sections-menus{
-          gap: 30px;   
+          gap: 42pxpx;   
            @include flex-colum;
           align-items: center;
           width: 100%;
@@ -401,6 +401,7 @@ p{
             padding: 0 30px;
             animation: fadeIn 0.5s ease forwards;
             opacity: 0;
+            margin-bottom: 19px;
           }
           .menu-category-entrées{
             animation-delay: 1s;
@@ -438,7 +439,7 @@ p{
           background-color:$color-Tertiaire;
           position: absolute;
           width: 14%;
-          height:60px;
+          height:100%;
           border: solid 1px $color-Tertiaire;
           border-top-right-radius: 14px;
           border-bottom-right-radius: 14px;
