@@ -57,7 +57,7 @@
         &:hover{
          background-image: $button-gradiente; // Utilisez une teinte plus claire pour l'effet hover
          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-         border: solid 1px ($color-Secondaire, 10%);
+         border: solid 1px $color-Secondaire;
    }
     }
     //mixins-wrap
@@ -233,11 +233,11 @@
     @keyframes headshake {
      0% {
           // entièrement à droite
-          transition: translatey(2%);
+          transform: translatey(2%);
       }
       100% {
           // entièrement à gauche
-         transition: translateX(3%);
+         transform: translateX(3%);
       }
   }
 

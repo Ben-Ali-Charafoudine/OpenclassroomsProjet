@@ -27,209 +27,217 @@
         <!-- Section principale pour présenter le restaurant -->
 
         <section class="restaurant-intro">
-        <div class="sections-menus"> 
-            <div class="title-menu">
-            <h1 class="menu-title">La palette du goût</h1>
-            <div class="mask"></div>
+            <div class="sections-menus">
+                <div class="title-menu">
+                    <h1 class="menu-title">La palette du goût</h1>
+                    <div class="mask"></div>
+                </div>
+                <!-- Section pour les entrées -->
+                <div class="menu-category-entrées">
+
+                    <h2>ENTRÉES</h2>
+                    <div class="bloc-articles">
+
+                        <article class="entrées">
+                            <div class="price">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <span>25€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="entrées1" name="entrées1" class="optin">
+                                <label for="entrées1"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="entrées">
+                            <div class="price">
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <p>Et ses copeaux de truffe noire</p>
+                            </div>
+
+                            <span>35€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="entrées2" name="entrées2" class="optin">
+                                <label for="entrées2"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="entrées">
+                            <div class="price">
+                                <h3>Œuf au plat</h3>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+                            <span>20€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="entrées3" name="entrées3" class="optin">
+                                <label for="entrées3"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Section pour les plats -->
+                <div class="menu-category-plats">
+                    <h2>PLATS</h2>
+                    <div class="bloc-articles">
+
+                        <article class="plat">
+                            <div class="price">
+                                <h3>Filet de bœuf aux herbes</h3>
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                            <span>40€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="plat1" name="plat" class="optin">
+                                <label for="plat1"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="plat">
+                            <div class="price">
+                                <h3>Parmentier de queue de bœuf</h3>
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+                            <span>35€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="plat2" name="plat" class="optin">
+                                <label for="plat2"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="plat">
+                            <div class="price">
+                                <h3>Filet de turbot</h3>
+                                <p>Aux agrumes</p>
+                            </div>
+                            <span>44€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="plat3" name="plat" class="optin">
+                                <label for="plat3"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Section pour les desserts -->
+                <div class="menu-category-desserts">
+                    <h2>DESSERTS</h2>
+                    <div class="bloc-articles">
+
+                        <article class=" dessert">
+                            <div class="price">
+                                <h3>Paris-Brest</h3>
+                                <p>Revisité</p>
+                            </div>
+                            <span>18€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="dessert1" name="dessert" class="optin">
+                                <label for="dessert1"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="dessert">
+                            <div class="price">
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <span>22€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="dessert2" name="dessert" class="optin">
+                                <label for="plat1"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="dessert">
+                            <div class="price">
+                                <h3>Mousse au chocolat</h3>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                            <span>23€</span>
+                            <div class="choix">
+                                <input type="checkbox" id="dessert3" name="dessert" class="optin">
+                                <label for="dessert3"></label>
+                                <div class="font">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+
+
+                <!-- Bouton de commande -->
+                <div class="commander-btn">
+                    <a id="commande" href="index.html" class="btn-commander">Commander</a>
+                </div>
             </div>
-        <!-- Section pour les entrées -->
-            <div class="menu-category-entrées">
-            
-            <h2>ENTRÉES</h2>
-            <div class="bloc-articles">
-       
-            <article class="entrées">
-                <div class="price">
-                <h3>Fricassée d'escargots</h3>
-                <p>Au piment d'Espelette</p>
-                </div>
-                <span>25€</span>
-                <label for="entrées1" class="choix">
-                    <input type="checkbox" id="entrées1" name="entrées1" class="optin">
-                    <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label>
-            </article>
-            
-            <article class="entrées">
-                <div class="price">
-                <h3>Foie gras de canard mi-cuit</h3>
-                <p>Et ses copeaux de truffe noire</p>
-                </div>
-                
-                <span>35€</span>
-                <label for="entrées2" class="choix">
-                    <input type="checkbox" id="entrées2" name="entrées2" class="optin">
-                        <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                        </div>
-                    </label>
-            </article>
-
-            <article class="entrées">
-                <div class="price">
-                <h3>Œuf au plat</h3>
-                <p>Assaisonné à la truffe sur lit de caviar</p>
-                </div>
-                <span >20€</span>
-                <label for="entrées3" class="choix">
-                    <input type="checkbox" id="entrées3" name="entrées3" class="optin">
-                        <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label>
-                
-                
-            </article>
-            </div>
-            </div>
-    
-        <!-- Section pour les plats -->
-        <div class="menu-category-plats">
-            <h2>PLATS</h2>
-            <div class="bloc-articles">
-          
-            <article class="plat">
-                <div class="price">
-                <h3>Filet de bœuf aux herbes</h3>
-                <p>Accompagné de sa ribambelle de légumes</p>
-                </div>
-                <span >40€</span> 
-                <label for="plat1" class="choix">
-                    <input type="checkbox" id="plat1" name="plat" class="optin">
-                    <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label>  
-            </article>
-
-            <article class="plat">
-                <div class="price">
-                <h3>Parmentier de queue de bœuf</h3>
-                <p>À la truffe noire sur sa purée de panais</p>
-                 </div>
-                <span>35€</span>
-                <label for="plat2" class="choix">
-                    <input type="checkbox" id="plat2" name="plat" class="optin">
-                    <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label>
-            </article>
-
-            <article class="plat">
-                <div class="price">
-                <h3>Filet de turbot</h3>
-                <p>Aux agrumes</p>
-                </div>
-                <span >44€</span>
-                    <label for="plat3" class="choix">
-                        <input type="radio" id="plat" name="plat" class="optin">
-                        <div class="font">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        </label>  
-            </article>
-          </div>
-        </div>
-    
-        <!-- Section pour les desserts -->
-        <div class="menu-category-desserts">
-            <h2>DESSERTS</h2>
-            <div class="bloc-articles">
-           
-            <article class=" dessert"> 
-                <div class="price">
-                <h3>Paris-Brest</h3>
-                <p>Revisité</p>
-            </div>
-               <span>18€</span> 
-               <label for="dessert1" class="choix">
-                <input type="checkbox" id="dessert1" name="dessert" class="optin">
-                <div class="font">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-                </label>
-            </article>
-
-            <article class="dessert">
-                <div class="price">
-                <h3>Macaron au chocolat d'exception</h3>
-                <p>Et glace à la vanille de Madagascar</p>
-                </div>
-                <span >22€</span>
-                <label for="dessert2" class="choix">
-                    <input type="checkbox" id="dessert2" name="dessert" class="optin">
-                    <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label>
-            </article>
-
-            <article class="dessert">
-                <div class="price">
-                <h3>Mousse au chocolat</h3>  
-                <p>Au piment d'Espelette et à la truffe noire</p>
-                </div>
-                <span >23€</span>
-                <label for="dessert3" class="choix">
-                    <input type="checkbox" id="dessert3" name="dessert" class="optin">
-                    <div class="font">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    </label> 
-            </article> 
-        </div>
-       </div>
-       
-      
-    
-        <!-- Bouton de commande -->
-        <div class="commander-btn">
-            <a id="commande" href="index.html" class="btn-commander">Commander</a>
-        </div>
-    </div>
-</section>
+     </section>
     </main>
-    
+
     <footer>
-        <section class="footer">
+        
             <nav class="menu-nav">
-            
-            <div class="nav-end">
-                
-                <div class="propo-deveni">
-                
-                    <a class="link-nav" href="#">
-                    <i class="fa-solid fa-utensils"></i>
-                    <p>Proposer un restaurant</p>
-                    </a>
-                
-                
-                    <a class="link-nav"  href="#">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <p> Devenir partenaire</p>
-                    </a>
-               </div>
-            <div class="mention-contact">
-               
-                <a class="link-nav"  href="#">
-                
-                Mentions légales
-               
-                </a>
-                <a class="link-nav"  href="#">
-                Contact
-                </a>
-            </div>
-        </div>
-          
-            <img class="logo-footer"  src="images/logo/ohmyfood.png" alt="img-footer">
-       
-        </nav>
-        </section>
+
+                <div class="nav-end">
+
+                    <div class="propo-deveni">
+
+                        <a class="link-nav" href="#">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Proposer un restaurant</p>
+                        </a>
+
+
+                        <a class="link-nav" href="#">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <p> Devenir partenaire</p>
+                        </a>
+                    </div>
+                    <div class="mention-contact">
+
+                        <a class="link-nav" href="#">
+
+                            Mentions légales
+
+                        </a>
+                        <a class="link-nav" href="#">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+
+                <img class="logo-footer" src="images/logo/ohmyfood.png" alt="img-footer">
+
+            </nav>
+   
     </footer>
 
 </body>
+
 </html>

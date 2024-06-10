@@ -33,10 +33,10 @@
 }
 @keyframes headshake {
   0% {
-    transition: translatey(2%);
+    transform: translatey(2%);
   }
   100% {
-    transition: translateX(3%);
+    transform: translateX(3%);
   }
 }
 body {
@@ -103,7 +103,7 @@ header #exploreButton {
 header #exploreButton:hover {
   background-image: linear-gradient(to bottom, #FF79DA 40%, #9356DC 100%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: solid 1px #FF79DA, 10%;
+  border: solid 1px #FF79DA;
 }
 header #exploreButton a {
   text-decoration: none;
@@ -310,7 +310,7 @@ footer .menu-nav .link-nav {
 }
 footer .menu-nav .link-nav p {
   margin: 3px;
-  padding: auto;
+  padding: 8px;
 }
 footer .menu-nav .mention-contact {
   display: flex;
@@ -508,8 +508,8 @@ footer .logo-footer {
 .menu .menus-container .entrées .choix, .menu .menus-container .plat .choix, .menu .menus-container .dessert .choix {
   background-color: #99E2D0;
   position: absolute;
-  width: 11%;
-  height: 59px;
+  width: 14%;
+  height: 60px;
   border: solid 1px #99E2D0;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
@@ -574,7 +574,7 @@ footer .logo-footer {
 .menu .commander-btn #commande:hover {
   background-image: linear-gradient(to bottom, #FF79DA 40%, #9356DC 100%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: solid 1px #FF79DA, 10%;
+  border: solid 1px #FF79DA;
 }
 
 @media (min-width: 768px) {
