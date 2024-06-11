@@ -340,7 +340,7 @@ footer .logo-footer {
   padding-bottom: 0.2rem;
   bottom: 0;
   left: 0;
-  width: 14%;
+  width: 58px;
   transform-origin: bottom left;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(1);
@@ -395,6 +395,7 @@ footer .logo-footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 20px 0px;
 }
 .menu .menus-container .sections-menus {
   gap: 42pxpx;
@@ -509,7 +510,7 @@ footer .logo-footer {
 .menu .menus-container .entrées .choix, .menu .menus-container .plat .choix, .menu .menus-container .dessert .choix {
   background-color: #99E2D0;
   position: absolute;
-  width: 14%;
+  width: 60px;
   height: 100%;
   border: solid 1px #99E2D0;
   border-top-right-radius: 14px;
@@ -666,7 +667,7 @@ footer .logo-footer {
     width: 69%;
   }
   .menu h2 {
-    width: 8%;
+    width: 58px;
   }
   .menu header .link-header {
     justify-content: space-between;
@@ -679,7 +680,6 @@ footer .logo-footer {
     padding: 0 45px;
   }
   .menu .menus-container .restaurant-intro .choix {
-    width: 9.6%;
     height: 100%;
   }
 }
@@ -779,7 +779,7 @@ footer .logo-footer {
     height: 100%;
   }
   .menu h2 {
-    width: 11%;
+    width: 58px;
   }
   .menu .head-pag .link-header {
     justify-content: space-between;
