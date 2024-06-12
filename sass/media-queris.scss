@@ -10,8 +10,8 @@
      }
     }
      .logo-tête{
-      width: 22%;
-      height: 45px;
+      width: 200px;
+      Height:34.2px;
       padding: 24px 0px;  
      }
      .logo-carte{
@@ -70,7 +70,7 @@ footer{
         @include flex-row-center;
         gap: 16px;
         padding-left: 15px;
-        font-size: 13px;
+        
         .link-nav{
         p{
             margin: 0;
@@ -82,7 +82,7 @@ footer{
       .mention-contact{
        @include flex-row-center;
         gap: 9px;
-        font-size: 11px;
+        
       }  
     
 
@@ -131,8 +131,9 @@ footer{
      }
     }
      .logo-tête{
-      width: 22%;
-      height: 45px;
+      
+      width: 200px;
+      Height:34.2px;
       padding: 24px 0px;  
      }
      .logo-carte{
@@ -194,7 +195,7 @@ footer{
         @include flex-row-center;
         gap: 16px;
         padding-left: 15px;
-        font-size: 13px;
+        
         .link-nav{
         p{
             margin: 0;
@@ -206,7 +207,7 @@ footer{
       .mention-contact{
        @include flex-row-center;
         gap: 9px;
-        font-size: 11px;
+        
       }  
     
 
