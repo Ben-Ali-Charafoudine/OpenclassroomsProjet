@@ -1,25 +1,25 @@
 @charset "UTF-8";
 /*...effe h2 au survole
-@mixin effets-h2{
+    @mixin effets-h2{
 
-  position: relative;
-  padding-bottom: 0.2rem;
-  &::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 7%;
-    background-color: green;
-    transform:scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-in-out;
-  }
-  &:hover::after{
-   transform: scaleX(1);
-   border-bottom: solid 0.3rem $color-Tertiaire;
-  }
-}..*/
+      position: relative;
+      padding-bottom: 0.2rem;
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 7%;
+        background-color: green;
+        transform:scaleX(0);
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-in-out;
+      }
+      &:hover::after{
+       transform: scaleX(1);
+       border-bottom: solid 0.3rem $color-Tertiaire;
+      }
+    }..*/
 @import "https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@400;500;700&display=swap";
 @keyframes fadeIn {
   from {
@@ -54,8 +54,8 @@ header {
   align-items: center;
 }
 header .logo-tête {
-  width: 40%;
-  height: 36px;
+  width: 197px;
+  Height: 36px;
   font-family: Shrikhand;
   padding: 11px 0px;
 }
@@ -207,6 +207,21 @@ header #exploreButton p {
   box-sizing: border-box;
   width: 100%;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.main-container .restaurants .arti-restau .nouveau-label {
+  background-color: #99E2D0;
+  color: #008766;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .main-container .restaurants .arti-restau h3 {
   padding-top: 10px;
@@ -242,6 +257,7 @@ header #exploreButton p {
   opacity: 1;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .title .paragraphe .mask:hover {
   background: none;
@@ -292,6 +308,8 @@ footer .menu-nav .propo-deveni {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  font-size: 16px;
+  font-weight: 515;
 }
 footer .menu-nav .propo-deveni .fa-handshake-angle {
   transform: translateX(-1px) rotate(-19deg) translateY(2px);
@@ -316,6 +334,8 @@ footer .menu-nav .mention-contact {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  font-size: 16px;
+  font-weight: 400;
 }
 footer .logo-footer {
   filter: brightness(0) invert(1);
@@ -427,6 +447,7 @@ footer .logo-footer {
   opacity: 1;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu .menus-container .title-menu .mask:hover {
   background: none;
@@ -450,7 +471,9 @@ footer .logo-footer {
 .menu .menus-container .title-menu .mask:hover::after {
   height: 100%;
 }
-.menu .menus-container .menu-category-entrées, .menu .menus-container .menu-category-plats, .menu .menus-container .menu-category-desserts {
+.menu .menus-container .menu-category-entrées,
+.menu .menus-container .menu-category-plats,
+.menu .menus-container .menu-category-desserts {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -473,7 +496,9 @@ footer .logo-footer {
 .menu .menus-container .menu-category-desserts {
   animation-delay: 5s;
 }
-.menu .menus-container .entrées, .menu .menus-container .plat, .menu .menus-container .dessert {
+.menu .menus-container .entrées,
+.menu .menus-container .plat,
+.menu .menus-container .dessert {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -490,24 +515,32 @@ footer .logo-footer {
   position: relative;
   padding: 10px 16px;
 }
-.menu .menus-container .entrées:hover .choix, .menu .menus-container .plat:hover .choix, .menu .menus-container .dessert:hover .choix {
+.menu .menus-container .entrées:hover .choix,
+.menu .menus-container .plat:hover .choix,
+.menu .menus-container .dessert:hover .choix {
   right: 0;
   opacity: 1;
   visibility: visible;
   transition: right 1.1s ease, opacity 2.1s ease;
 }
-.menu .menus-container .entrées:hover span, .menu .menus-container .plat:hover span, .menu .menus-container .dessert:hover span {
+.menu .menus-container .entrées:hover span,
+.menu .menus-container .plat:hover span,
+.menu .menus-container .dessert:hover span {
   transform: translateX(-79%);
   transition: 1.1s;
 }
-.menu .menus-container .entrées .price, .menu .menus-container .plat .price, .menu .menus-container .dessert .price {
+.menu .menus-container .entrées .price,
+.menu .menus-container .plat .price,
+.menu .menus-container .dessert .price {
   display: flex;
   flex-direction: column;
   gap: 6px;
   width: 76%;
   padding-left: 8px;
 }
-.menu .menus-container .entrées .choix, .menu .menus-container .plat .choix, .menu .menus-container .dessert .choix {
+.menu .menus-container .entrées .choix,
+.menu .menus-container .plat .choix,
+.menu .menus-container .dessert .choix {
   background-color: #99E2D0;
   position: absolute;
   width: 60px;
@@ -527,13 +560,17 @@ footer .logo-footer {
   opacity: -0.5;
   transition: 1.2s;
 }
-.menu .menus-container .entrées .choix input, .menu .menus-container .plat .choix input, .menu .menus-container .dessert .choix input {
+.menu .menus-container .entrées .choix input,
+.menu .menus-container .plat .choix input,
+.menu .menus-container .dessert .choix input {
   position: relative;
   top: 24px;
   left: 0px;
   display: none;
 }
-.menu .menus-container .entrées .choix .font, .menu .menus-container .plat .choix .font, .menu .menus-container .dessert .choix .font {
+.menu .menus-container .entrées .choix .font,
+.menu .menus-container .plat .choix .font,
+.menu .menus-container .dessert .choix .font {
   border: solid 1px #99E2D0;
   border-radius: 100%;
   color: #99E2D0;
@@ -541,7 +578,9 @@ footer .logo-footer {
   width: 22px;
   line-height: 21px;
 }
-.menu .menus-container .entrées .choix .fa-check, .menu .menus-container .plat .choix .fa-check, .menu .menus-container .dessert .choix .fa-check {
+.menu .menus-container .entrées .choix .fa-check,
+.menu .menus-container .plat .choix .fa-check,
+.menu .menus-container .dessert .choix .fa-check {
   position: relative;
   font-size: 13px;
   color: #99E2D0;
@@ -588,8 +627,8 @@ footer .logo-footer {
     width: 80px;
   }
   header .logo-tête {
-    width: 22%;
-    height: 45px;
+    width: 200px;
+    Height: 34.2px;
     padding: 24px 0px;
   }
   header .logo-carte {
@@ -647,7 +686,6 @@ footer .logo-footer {
     align-items: center;
     gap: 16px;
     padding-left: 15px;
-    font-size: 13px;
   }
   footer .menu-nav .propo-deveni .link-nav p {
     margin: 0;
@@ -657,7 +695,6 @@ footer .logo-footer {
     flex-direction: row;
     align-items: center;
     gap: 9px;
-    font-size: 11px;
   }
   footer .logo-en-page {
     width: 30%;
@@ -692,8 +729,8 @@ footer .logo-footer {
     width: 80px;
   }
   header .logo-tête {
-    width: 22%;
-    height: 45px;
+    width: 200px;
+    Height: 34.2px;
     padding: 24px 0px;
   }
   header .logo-carte {
@@ -755,7 +792,6 @@ footer .logo-footer {
     align-items: center;
     gap: 16px;
     padding-left: 15px;
-    font-size: 13px;
   }
   footer .menu-nav .propo-deveni .link-nav p {
     margin: 0;
@@ -765,7 +801,6 @@ footer .logo-footer {
     flex-direction: row;
     align-items: center;
     gap: 9px;
-    font-size: 11px;
   }
   footer .logo-en-page {
     width: 30%;

@@ -1,158 +1,180 @@
+@mixin img-widht {
+  width: 100%;
+  height: 144px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
 
-@mixin img-widht{
-    width: 100%;
-    height: 144px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: cover;
-    }
-    //mixins-flex
-    @mixin flex-row-center{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    @mixin flex-row{
-      display: flex;
-      flex-direction: row;
-    }
-    @mixin flex-colum-center{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @mixin flex-colum{
-      display: flex;
-      flex-direction: column;
-    }
-    @mixin colum-renverse-center{
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-    @mixin colum-renverse{
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    //mixins-carte
-    @mixin cart{
-      border-top: solid 1px #a09c9c;
-      border-bottom: solid 4px rgb(181, 180, 180);
-      background-color:#EAEAEA;
-      width: 100%;
-      box-shadow: $shadow-btn;
-    }
-    //mixins-boutton
-    @mixin boutton{
-      text-decoration: none;
-      width: auto;
-      color: #fff;
-      border: solid 1px $color-Primaire;
-      border-radius: 100px;
-      padding: 15px 26px;
-      background-image: $button-gradient;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 45px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        &:hover{
-         background-image: $button-gradiente; // Utilisez une teinte plus claire pour l'effet hover
-         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-         border: solid 1px $color-Secondaire;
-   }
-    }
-    //mixins-wrap
-    @mixin flex-vrap{
-      display: flex;
-      flex-wrap: wrap
-    }
-    //mixins-article
-    @mixin article-awsom{
-      display: flex;
-      justify-content:end;
-    }
-    @mixin article-titl{
-      margin: 0px;
-      padding: 20px;
-    }
-    @mixin article-p{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    // boutto-list
-    @mixin placement{
-      position: relative;
-      display: inline-block;
-      padding-top: 30px;
-    }
-    @mixin btn-list{
-     position: relative;
-     z-index: 2;
-    list-style-type: none;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+//mixins-flex
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-colum-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin colum-renverse-center {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+@mixin colum-renverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+//mixins-carte
+@mixin cart {
+  border-top: solid 1px #a09c9c;
+  border-bottom: solid 4px rgb(181, 180, 180);
+  background-color: #EAEAEA;
+  width: 100%;
+  box-shadow: $shadow-btn;
+}
+
+//mixins-boutton
+@mixin boutton {
+  text-decoration: none;
+  width: auto;
+  color: #fff;
+  border: solid 1px $color-Primaire;
+  border-radius: 100px;
+  padding: 15px 26px;
+  background-image: $button-gradient;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 45px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-image: $button-gradiente; // Utilisez une teinte plus claire pour l'effet hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border: solid 1px $color-Secondaire;
-    border-radius: 50px;
-    background-image: $button-gradient;
-    color: $color-btn;
-    text-align: center;
-    width: 27%;
-    padding: 13px; 
-    }
-    @mixin effet{
-       position: absolute;
-       top: 100%;
-       left: 0;
-       transform: scaleY(0);
-       transform-origin: top;
-       transition: transform 0.5s ease; 
-      z-index: 1;
-       background-color: white;
-       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-       width: 100%;
-       
-    }
-    @mixin bordur{
-     border-radius:18px;
-     border: solid 1px;
-    }
-    @mixin border-top{
-      border: solid 1px #fff;
-      border-top-left-radius: 41px;
-      border-top-right-radius: 41px;
+  }
+}
 
-    }
-    // fonction
-    @mixin border{
-      border: solid 1px #fff;
-      border-radius: 23px;
-      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-      width: 100%;
-    }
-    @mixin ul-li{
-          margin: 0;
-          padding: 0;
-          list-style: none;    
-    }
-    @mixin li-ul{
-       padding: 8px;
-          border-bottom: 1px solid #ddd; 
-    }
-    // mixin main
-    @mixin box-restaurants{
-      display: flex;
-      flex-wrap: wrap;
-     align-items: center;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 29px 10px;
-      gap: 60px;
-      align-items: center;
-    }
-    //mixin pages
-    /*...effe h2 au survole
+//mixins-wrap
+@mixin flex-vrap {
+  display: flex;
+  flex-wrap: wrap
+}
+
+//mixins-article
+@mixin article-awsom {
+  display: flex;
+  justify-content: end;
+}
+
+@mixin article-titl {
+  margin: 0px;
+  padding: 20px;
+}
+
+@mixin article-p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// boutto-list
+@mixin placement {
+  position: relative;
+  display: inline-block;
+  padding-top: 30px;
+}
+
+@mixin btn-list {
+  position: relative;
+  z-index: 2;
+  list-style-type: none;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: solid 1px $color-Secondaire;
+  border-radius: 50px;
+  background-image: $button-gradient;
+  color: $color-btn;
+  text-align: center;
+  width: 27%;
+  padding: 13px;
+}
+
+@mixin effet {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+
+}
+
+@mixin bordur {
+  border-radius: 18px;
+  border: solid 1px;
+}
+
+@mixin border-top {
+  border: solid 1px #fff;
+  border-top-left-radius: 41px;
+  border-top-right-radius: 41px;
+
+}
+
+// fonction
+@mixin border {
+  border: solid 1px #fff;
+  border-radius: 23px;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+  width: 100%;
+}
+
+@mixin ul-li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin li-ul {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+// mixin main
+@mixin box-restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 29px 10px;
+  gap: 60px;
+  align-items: center;
+}
+
+//mixin pages
+/*...effe h2 au survole
     @mixin effets-h2{
      
       position: relative;
@@ -174,70 +196,75 @@
       }
     }..*/
 
-    //mixin h2 normal sans sur vole
+//mixin h2 normal sans sur vole
 
-    @mixin effets-h2{
-     
-      position: relative;
-      padding-bottom: 0.2rem;
-        bottom: 0;
-        left: 0;
-        width: 58px;
-        transform-origin: bottom left;
-        transition: transform 0.3s ease-in-out;
-       transform: scaleX(1);
-       border-bottom: solid 0.3rem $color-Tertiaire;
-    }
-    @mixin police-font{
-      font-family: $polices-texte;
-      font-size: 13.04px;
-    }
-    //mixine les pages
-    @mixin entre-plats-desserts{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      border: solid 1px #FFFFFF;
-      border-radius: 14px;
-      background-color: #FFFFFF;
-      justify-content: space-between;
-     animation: fadeIn 0.5s ease forwards;
-     opacity: 0;
-     box-shadow: $shadow-btn;
-     gap: 3px;
-    }
-    @mixin menu-category{
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      width: 100%;
-      justify-content: center;
-      flex-grow: 1;
-      gap: 2px;
-      box-sizing: border-box;
-    }
-    // keyframes
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @mixin choix-menu{
-    
-    }
-    @keyframes headshake {
-     0% {
-          // entièrement à droite
-          transform: translatey(2%);
-      }
-      100% {
-          // entièrement à gauche
-         transform: translateX(3%);
-      }
+@mixin effets-h2 {
+
+  position: relative;
+  padding-bottom: 0.2rem;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(1);
+  border-bottom: solid 0.3rem $color-Tertiaire;
+}
+
+@mixin police-font {
+  font-family: $polices-texte;
+  font-size: 13.04px;
+}
+
+//mixine les pages
+@mixin entre-plats-desserts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1px #FFFFFF;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  box-shadow: $shadow-btn;
+  gap: 3px;
+}
+
+@mixin menu-category {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 2px;
+  box-sizing: border-box;
+}
+
+// keyframes
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin choix-menu {}
+
+@keyframes headshake {
+  0% {
+    // entièrement à droite
+    transform: translatey(2%);
+  }
+
+  100% {
+    // entièrement à gauche
+    transform: translateX(3%);
+  }
+}
