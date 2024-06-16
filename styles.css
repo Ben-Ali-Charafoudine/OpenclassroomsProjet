@@ -39,6 +39,23 @@
     transform: translateX(3%);
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 body {
   display: flex;
   justify-content: center;
@@ -123,6 +140,7 @@ header #exploreButton p {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
   /*... the restorant to viste..*/
 }
 .main-container .fonctionnement {
@@ -234,6 +252,67 @@ header #exploreButton p {
   border-top-right-radius: 20px;
   object-fit: cover;
   box-sizing: border-box;
+}
+.main-container .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeOut 2s forwards 2s;
+}
+.main-container .loader .loader-content {
+  position: relative;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+  border-radius: 100%;
+  padding: 17px;
+  box-shadow: 2px 0px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #FF79DA 40%, #9356DC 100%);
+}
+.main-container .loader .loader-content img {
+  width: 100%;
+  color: #fff;
+}
+.main-container .loader .loader-content i {
+  margin: 0 10px;
+  font-size: 30px;
+}
+.main-container .loader .loader-circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite reverse;
+}
+.main-container .loader .fa-apple-whole {
+  position: absolute;
+  top: -15px; /* Ajuste cette valeur pour placer la pomme à l'extrémité du cercle */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: black;
+  animation: apple-spin 2s linear infinite;
+}
+.main-container .loader .loader-dots {
+  position: absolute;
+  width: 174px;
+  height: 174px;
+  border-radius: 50%;
+  border: 0px solid transparent;
+  border-top: 6px solid #9356DC;
+  border-right: 6px solid #FF79DA;
+  animation: spin 2s linear infinite reverse;
 }
 
 .title {
@@ -808,10 +887,6 @@ footer .logo-footer {
   footer .logo-en-page .logo-footer {
     filter: brightness(0) invert(1);
     width: 69%;
-  }
-  .menu {
-    .width: 9.6%;
-    height: 100%;
   }
   .menu h2 {
     width: 58px;
